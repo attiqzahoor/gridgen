@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GridGen - Visual CSS Grid Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/grid-generator.css" />
+    <link rel="stylesheet" href="styles/features.css" />
+    <link rel="stylesheet" href="styles/testimonials.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="logo"><span class="logo-icon">G</span> Gradient</div>
+        <button id="hamburger" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#grid-generator">Generator</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#" id="signup-btn">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Design Stunning <span class="css-text">CSS Grids</span>Visually</h1>
+        <p>
+          Interactive Grid Generator for developers and designers.<br />Created
+          by Muhammad Attiq - Senior Web Developer.
+        </p>
+        <div class="buttons">
+          <a href="#grid-generator" class="primary-btn">Start Designing</a>
+          <a href="#" class="secondary-btn">See Demo</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/image.png" alt="CSS Illustration" />
+      </div>
+    </section>
+
+    <!-- Grid Generator -->
+    <div id="grid-generator">
+      <header class="grid-generator-header">
+        <h1>Interactive Grid Generator</h1>
+        <p>Create your layout and get the HTML, CSS, and React code</p>
+      </header>
+      <main class="grid-generator-container">
+        <section class="config-panel">
+          <h2>Grid Configuration</h2>
+          <div class="inputs">
+            <label>
+              Rows
+              <input type="number" id="rows" value="3" min="1" />
+            </label>
+            <label>
+              Columns
+              <input type="number" id="cols" value="3" min="1" />
+            </label>
+            <label>
+              Gap (px)
+              <input type="number" id="gap" value="10" min="0" />
+            </label>
+          </div>
+          <div class="buttons">
+            <button id="generateBtn" class="btn-generate">Generate Grid</button>
+            <button id="clear">Clear</button>
+          </div>
+          <h3>Your Grid Preview</h3>
+          <div id="grid" class="grid-preview">
+            <span>Configure your grid above and click "Generate Grid"</span>
+          </div>
+        </section>
+        <!-- Code Panel -->
+        <section class="code-panel">
+          <h2>Generated Code</h2>
+          <div class="tabs">
+            <button class="tab active" data-target="html">HTML</button>
+            <button class="tab" data-target="css">CSS</button>
+            <button class="tab" data-target="react">React</button>
+          </div>
+          <div class="code-box">
+            <textarea id="htmlCode"></textarea>
+            <textarea id="cssCode" class="hidden"></textarea>
+            <textarea id="reactCode" class="hidden"></textarea>
+          </div>
+          <button id="copyBtn"><i class="fas fa-copy"></i> Copy Code</button>
+          <section class="instructions">
+            <div class="instructions-container">
+              <h2>How to Use</h2>
+              <ol class="instructions-list">
+                <li>Adjust the number of rows and columns.</li>
+                <li>Set the gap between grid items.</li>
+                <li>Click "Generate Grid" to see your layout.</li>
+                <li>You can draw any type of grid layout.</li>
+                <li>Copy the generated HTML, CSS, or React code.</li>
+              </ol>
+              <p class="instructions-tip">
+                <strong>Tip:</strong> You can also clear the grid and start over
+                at any time.
+              </p>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="features-header">
+          <h2>Powerful Features</h2>
+          <p>Everything you need to create perfect grid layouts with ease</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-magic"></i></div>
+            <h3>Visual Editor</h3>
+            <p>
+              Drag and drop interface to build grids visually. No coding
+              required to get started.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Responsive Controls</h3>
+            <p>
+              Preview and adjust your grid for different screen sizes with
+              intuitive breakpoint controls.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-code"></i></div>
+            <h3>Clean Code Export</h3>
+            <p>
+              Get production-ready HTML & CSS code with your preferred naming
+              conventions and syntax.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-share-alt"></i></div>
+            <h3>Share & Collaborate</h3>
+            <p>
+              Share your grid designs with team members or clients via unique
+              URLs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <div class="testimonials-main-header">
+          <h2>What Our Users Say</h2>
+          <p>
+            Don't just take our word for it. Here's what designers and
+            developers say about GridGen.
+          </p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-icon">S</div>
+              <div>
+                <h4>Sarah Johnson</h4>
+                <p>Frontend Developer</p>
+              </div>
+            </div>
+            <p>
+              "GridGen has completely transformed my workflow. I can now
+              prototype complex layouts in minutes instead of hours."
+            </p>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-icon">M</div>
+              <div>
+                <h4>Michael Chen</h4>
+                <p>UI/UX Designer</p>
+              </div>
+            </div>
+            <p>
+              "As a designer who's not strong in CSS, this tool helps me create
+              production-ready code that developers love."
+            </p>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-icon">A</div>
+              <div>
+                <h4>Alex Rodriguez</h4>
+                <p>Team Lead</p>
+              </div>
+            </div>
+            <p>
+              "Our team's productivity increased by 30% after adopting GridGen.
+              The collaboration features are game-changing."
+            </p>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="cta">
+          <h3>Ready to create amazing grids?</h3>
+          <button class="cta-button">Start Your Free Trial</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <div class="footer-icon">G</div>
+            <span class="footer-text">GridGen</span>
+          </div>
+          <p class="footer-description">
+            The visual CSS grid generator for designers and developers.
+          </p>
+          <div class="social-links">
+            <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/attiqzahoor"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://linkedin.com/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://discord.com/"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#updates">Updates</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#docs">Documentation</a></li>
+            <li><a href="#tutorials">Tutorials</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#support">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Subscribe</h4>
+          <p>Get the latest updates about GridGen</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email" />
+            <button class="subscribe-button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 GridGen. All rights reserved.</p>
+        <div class="footer-terms">
+          <a href="#terms">Terms</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#cookies">Cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Script/index.js"></script>
+  </body>
+</html>

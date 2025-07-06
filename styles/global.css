@@ -1,0 +1,39 @@
+/* Global Reset & Variables */
+:root {
+  --primary: #a855f7;
+  --secondary: #6366f1;
+  --accent: #ec4899;
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --gradient: linear-gradient(90deg, #6f28d2, #ec4899);
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --background: #f8fafc;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
