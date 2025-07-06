@@ -29,11 +29,10 @@
 
 📦 gridgen/
 ┣ 📂 assets/
-┃ ┗ 📄 logo.png, etc.
+┃ ┗ 📄 image.png, etc.
 ┣ 📂 script/
-┃ ┗ 📄 script.js
+┃ ┗ 📄 index.js
 ┣ 📂 style/
-┃ ┗ 📄 components.css
 ┣ 📄 index.html
 
 yaml
